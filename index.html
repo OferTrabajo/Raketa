@@ -17,11 +17,25 @@
 
 
 </head>
+<style>
+	.restricted-message {
+		display: none;
+		text-align: center;
+		padding: 50px;
+	}
+
+	.content {
+		display: none;
+	}
+</style>
 
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+	<div class="restricted-message">
+        <h2>Acceso Restringido</h2>
+        <p>Por favor, accede a esta página desde un ordenador de escritorio o laptop.</p>
+    </div>
 
-
-
+	<div class="content"> 
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
 
 		<div class="container">
@@ -486,6 +500,7 @@
 			
 		</div>
 	</footer>
+</div>
 
 
 
@@ -508,5 +523,15 @@
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     	<script src="js/google-map.js"></script> -->
 </div>
-    </body>
-    </html>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		if (window.innerWidth < 1024) {
+			document.querySelector('.restricted-message').style.display = "block";
+		} else {
+			document.querySelector('.content').style.display = "block";
+		}
+	});
+</script>
+</body>
+</html>
+   
