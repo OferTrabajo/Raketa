@@ -6,7 +6,6 @@ body {
   font-size: 16px;
 margin-top: 100px;
 
-  
   justify-content: center; /* Centrado horizontal */
   align-items: center; /* Centrado vertical */
   
@@ -91,7 +90,7 @@ a {
   border-radius: 0px;
   margin-bottom: 0px;
   margin: 0 auto;
-  display: flex;
+  
   justify-content: center;
   background: none;
   position: absolute;
@@ -111,13 +110,13 @@ a {
 
 .navbar .container {
   max-width: 100%;
-  display: flex;
+
   justify-content: center;
   padding: 0;
 }
 
 .navbar-nav {
-  display: flex;
+
   justify-content: center;
   width: 100%;
 }
