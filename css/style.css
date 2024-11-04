@@ -108,6 +108,23 @@ a {
     text-transform: uppercase;
     letter-spacing: .2em; 
 }
+
+.navbar .container {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-item {
+  margin: 0 10px; /* Espaciado entre los elementos del menú */
+}
 .fondoo{
   background-color: #000;
 }
