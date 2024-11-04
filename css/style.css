@@ -6,7 +6,7 @@ body {
   font-size: 16px;
 margin-top: 100px;
 
-  display: flex; /* Para centrar */
+  
   justify-content: center; /* Centrado horizontal */
   align-items: center; /* Centrado vertical */
   
