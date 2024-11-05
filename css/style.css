@@ -3,7 +3,7 @@ body {
   color: rgba(255, 255, 255, 0.4);
   background: #1c2027;
   line-height: 1.7;
-position: relative;
+padding: 3%;
   font-size: 16px;
 margin-top: 100px;
 
@@ -91,15 +91,14 @@ a {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0px;
-  margin-bottom: 0px;
   margin: 0 auto;
-  margin-top: 10px;
-  justify-content: center;
   background: none;
   position: absolute;
   top: 20px;
   width: 100%;
-  padding-top: 5%;
+  padding-top: 100px;
+  padding-right: 10%;
+  padding-bottom: 20%;
   z-index: 200;
   background: #fff; }
   .site-navbar .navbar-brand {
@@ -111,22 +110,18 @@ a {
     letter-spacing: .2em; 
 }
 
-.navbar .container {
-  max-width: 100%;
 
-  justify-content: center;
-  padding: 0;
-}
 
 .navbar-nav {
-
+ 
   justify-content: center;
-  width: 100%;
 }
 
-.nav-item {
-  margin: 0 10px; /* Espaciado entre los elementos del menú */
+.espaciado{
+  margin-bottom: 1000px;
 }
+
+
 .fondoo{
   background-color: #000;
 }
