@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emparejamiento Amigo Secreto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i0.wp.com/wallpapers.com/images/hd/simple-pattern-iphone-kvdr6ts05xhmmd0x.jpg?ssl=1'); /* Imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #f9c74f;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+        select {
+            background: #fff;
+            color: #333;
+        }
+        button {
+            background: #f94144;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background: #f3722c;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #90be6d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amigo Secreto</h1>
+        <p>Selecciona tu nombre para descubrir quién es tu amigo secreto:</p>
+        <select id="userSelect">
+            <option value="">-- Selecciona tu nombre --</option>
+            <option value="Nena">Nena</option>
+            <option value="Marisol">Marisol</option>
+            <option value="Claudia">Claudia</option>
+            <option value="Samuel">Samuel</option>
+            <option value="Susana">Susana</option>
+            <option value="Valentina">Valentina</option>
+            <option value="Fernando">Fernando</option>
+            <option value="Nanci">Nanci</option>
+            <option value="Duvan">Duvan</option>
+            <option value="Carlos">Carlos</option>
+        </select>
+        <button onclick="showResult()">Descubrir</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        // Emparejamientos predefinidos
+        const pairings = {
+            Nena: "Claudia",
+            Marisol: "Nanci",
+            Claudia: "Marisol", // Excepción
+            Samuel: "Nena",     // Excepción
+            Susana: "Carlos",   // Excepción
+            Valentina: "Duvan",
+            Fernando: "Valentina",
+            Nanci: "Samuel",
+            Duvan: "Susana",
+            Carlos: "Fernando"
+        };
+
+        function showResult() {
+            const userSelect = document.getElementById("userSelect");
+            const userName = userSelect.value;
+            const resultDiv = document.getElementById("result");
+
+            if (!userName) {
+                resultDiv.innerText = "Por favor selecciona tu nombre.";
+                return;
+            }
+
+            const pairing = pairings[userName];
+            if (pairing) {
+                resultDiv.innerText = `Hola ${userName}, tu amigo secreto es: ${pairing}.`;
+            } else {
+                resultDiv.innerText = `No se encontró emparejamiento para ${userName}.`;
+            }
+        }
+    </script>
+</body>
+</html>
